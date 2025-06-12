@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accesibilty- tabindex</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="topnav wrapper">
+            <h1 class="logo"> <a href="/">My site</a></h1>
+            <nav class="nav">
+                <span id="nav-label" hidden>Navigation</span>
+                <button id="open-btn" class="nav__open" aria-expanded="false" aria-labelledby="nav-label">
+                    <img src="./img/hamburger.svg" alt="">
+                </button>
+                <div class="nav__menu" aria-labelledby="nav-label">
+                    <ul class="nav__list">
+                        <li class="nav__item drop-down">
+                            <button href="#" id="menuOneNavLink" class="nav__link-btn drop-down-btn"
+                                aria-expanded="false" aria-controls="services_menu">
+                                Services
+                                <span aria-hidden="true">&#X25bc;</span>
+                            </button>
+                            <ul id="services_menu" class="nav__sub" aria-describedby="menuOneNavLink">
+                                <li class="nav__sub-item"><a href="#" class="nav__sub-link">Alpha</a></li>
+                                <li class="nav__sub-item"><a href="#" class="nav__sub-link">Beta</a></li>
+                                <li class="nav__sub-item"><a href="#" class="nav__sub-link last-child">Gamma</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#about" id="about-link" class="main-link">About</a>
+                            <button href="#" id="menuOneNavLink" class="nav__link-btn drop-down-btn"
+                                aria-expanded="false" aria-controls="services_menu">
+                                <span aria-hidden="true">&#X25bc;</span>
+                            </button>
+                            <ul id="services_menu" class="nav__sub" aria-describedby="menuOneNavLink">
+                                <li class="nav__sub-item"><a href="#" class="nav__sub-link">Alpha</a></li>
+                                <li class="nav__sub-item"><a href="#" class="nav__sub-link">Beta</a></li>
+                                <li class="nav__sub-item"><a href="#" class="nav__sub-link last-child">Gamma</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav__item"> <a href="#portfolio" id="portfolio-link" class="main-link">Portfolio</a> </li>
+                        <li class="nav__item"> <a href="#contact" id="contact-link" class="main-link">Contact</a> </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section id="about" class="about wrapper">
+            <h2 id="about-heading" tabindex="-1">About</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, ut ex. Quis obcaecati, adipisci et
+                neque ex quasi repudiandae. Perspiciatis illum odit, debitis autem doloribus quidem adipisci rem
+                nesciunt corporis doloremque. Optio similique mollitia itaque ipsum ad quidem porro delectus?
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi itaque, aperiam, assumenda accusantium
+                esse, ut dolorem nostrum expedita consectetur hic nam totam. Excepturi laudantium alias exercitationem
+                culpa ratione? Ipsa necessitatibus saepe corporis quasi voluptatum? Quis reiciendis beatae illum,
+                deserunt earum ullam sapiente velit odio assumenda qui ipsam, vitae iste atque, iure id quas molestiae
+                obcaecati nobis nemo ut pariatur delectus. Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Sequi, fugit modi illo excepturi quod eum nostrum molestiae possimus architecto, cumque fuga velit odio
+                sunt. Est exercitationem veritatis inventore aut soluta ea dolorum officiis sequi autem beatae ex
+                corporis, praesentium magni alias recusandae tempore nobis impedit vero culpa, quisquam architecto
+                voluptatem! Hic totam ab id quos provident unde perferendis aliquam, facilis obcaecati quaerat porro
+                eveniet ipsa. Porro consequuntur tempora sint! Fugiat odit ad minus eveniet eligendi ipsa optio
+                excepturi. Impedit, ab! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla facilis porro
+                voluptate enim cupiditate voluptates magnam, voluptatibus laborum iusto! Exercitationem incidunt esse
+                impedit praesentium explicabo cumque ea nam doloribus maxime nihil, non suscipit! Dolorum excepturi, eum
+                doloribus magnam voluptate ipsum vero culpa doloremque officiis sint, reprehenderit itaque placeat, non
+                at? Asperiores aliquam reiciendis blanditiis beatae nostrum, culpa optio dolores possimus mollitia! Eius
+                dolor cum maxime saepe pariatur illum, alias assumenda voluptatibus ad molestiae reprehenderit
+                veritatis, est deleniti, officia hic nisi? Ipsum similique temporibus atque non quos corporis nemo
+                fugiat rem ex voluptatibus? Praesentium consequatur dolor labore, minima nobis earum sunt. Lorem ipsum
+                dolor sit amet consectetur adipisicing elit. Rem delectus labore laboriosam distinctio sunt cum quidem
+                necessitatibus culpa vero placeat. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem iste
+                non voluptatibus commodi perspiciatis officiis quasi quo debitis quae asperiores!
+            </p>
+        </section>
+        <section id="portfolio" class="portfolio wrapper">
+            <h2 id="portfolio-heading" tabindex="-1">Portfolio</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores recusandae quibusdam esse neque fugit,
+                delectus a praesentium odio obcaecati unde dolore eum soluta tenetur nesciunt incidunt suscipit nobis
+                animi! Molestiae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates eligendi quasi
+                impedit, labore vitae assumenda delectus magni corporis ratione totam animi eius repellat fugiat
+                suscipit inventore incidunt optio hic beatae perspiciatis? Quis iusto labore pariatur et doloribus
+                mollitia cum sint suscipit distinctio sed voluptatum debitis itaque voluptatem, aspernatur consequatur
+                eum nihil facere iure amet dicta. Sequi obcaecati quisquam nemo similique, nihil neque quidem ipsum
+                fugit? Voluptas eos architecto sint id. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Repudiandae nesciunt illum aliquid sit eaque id ab sunt vitae quasi deleniti molestias, dolor ullam
+                perferendis incidunt. Placeat sapiente consectetur cupiditate architecto. Officiis ullam voluptatum quia
+                maiores accusantium! Eos, optio deserunt? Nostrum consequuntur vel, repellat aliquid aut perferendis
+                sint porro quas, saepe inventore modi eligendi praesentium. Ullam voluptatum voluptates animi a saepe.
+            </p>
+        </section>
+        <section id="contact" class="contact wrapper">
+            <h2 id="contact-heading" tabindex="-1">Contact</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia qui quasi facere assumenda voluptatum
+                possimus perferendis nobis placeat in nihil? Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Omnis repellat harum aliquam nostrum praesentium voluptates iusto eius impedit aperiam id nobis
+                molestias animi quisquam cumque expedita dolorem, distinctio, dignissimos blanditiis sit esse a? Aut est
+                magnam voluptatum, qui quod, quas quaerat accusamus omnis assumenda iure dolorum aperiam velit
+                necessitatibus provident? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cupiditate illum
+                consequatur culpa dolorum fugit a laborum, vitae aperiam voluptas possimus quia deserunt beatae corporis
+                quae? Sint minima, quis veritatis exercitationem totam neque nulla, facere quisquam eaque quam
+                voluptatum tenetur placeat vitae autem. Inventore, perferendis? Inventore reprehenderit quasi corrupti
+                doloribus laborum repudiandae accusantium nemo non nisi obcaecati rem fugit, et quod.</p>
+        </section>
+    </main>
+    <footer class="footer">
+        &copy; 2025 All right reserved
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>

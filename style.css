@@ -1,0 +1,243 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+button,
+a {
+    font: inherit;
+}
+
+header,
+footer {
+    background-image: url('img/jeremy-perkins-uhjiu8FjnsQ-unsplash-small.jpg');
+    color: white;
+    position: relative;
+}
+
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    margin-top: 20vh;
+    font-size: 1.3rem;
+}
+
+section {
+    margin-top: 4rem;
+}
+
+
+h2 {
+    text-align: center;
+}
+
+section p {
+    font-size: 1.25rem;
+    line-height: 1.5;
+    text-align: justify;
+    /* word-break: keep-all; */
+}
+
+a:focus {
+    outline: 2px solid blue;
+}
+
+.wrapper {
+    width: min(100% - 3rem, 56.25rem);
+    margin-inline: auto;
+}
+
+.topnav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-block: 1.4rem;
+}
+
+.logo {
+    color: white;
+}
+
+.logo a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.nav__open {
+    border: none;
+    background: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.nav__open[aria-expanded='true'] {
+    +.nav__menu {
+        transform: translateY(100%);
+    }
+
+    +.nav__menu .nav__list li {
+        animation: smoothNav 0.3s ease-in-out forwards;
+        cursor: pointer;
+    }
+}
+
+@keyframes smoothNav {
+    0% {
+        transform: translateY(-2px);
+    }
+
+    80% {
+        transform: translateY(2px);
+        ;
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@media screen and (width >=40em) {
+    .nav__open {
+        display: none;
+    }
+}
+
+
+.nav__list {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    gap: 1.5rem;
+}
+
+.nav__list a,
+.nav__list button {
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: inherit;
+    cursor: pointer;
+}
+
+.nav__list button {
+    border: none;
+    background: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav__item {
+    /* padding-block: 1.5rem; */
+    position: relative;
+}
+
+.nav__sub {
+    position: absolute;
+    width: 7rem;
+    margin: 0;
+    top: 0;
+    padding: 0;
+    background-color: white;
+    color: black;
+    font-size: 1.6rem;
+    list-style: none;
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, .6);
+    transform: translateY(-100vw);
+}
+
+.nav__link-btn[aria-expanded='true'] {
+    +.nav__sub {
+        transform: translateY(20%);
+    }
+
+    /* +.nav__menu .nav__list li {
+        animation: smoothNav 0.3s ease-in-out forwards;
+        cursor: pointer;
+    } */
+}
+
+.nav__sub-item {
+    margin: 0;
+    border-bottom: 1px solid gray;
+}
+
+.nav__sub-link {
+    display: block;
+    padding: 1ex 1em;
+}
+
+
+.drop-down:hover .nav__sub,
+.drop-down:focus .nav__sub {
+    display: block;
+}
+
+.drop-down-btn span {
+    font-size: 0.75rem;
+    margin-left: -4px;
+}
+
+@media screen and (width < 40em) {
+    .nav__menu {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background: white;
+        color: black;
+        width: 100%;
+        box-shadow: 0 0 0.5rem rgba(0, 0, 0, .6);
+        z-index: 1;
+        padding: 0;
+        margin: 0;
+        transform: translateY(-100%);
+    }
+
+    .nav__list {
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+    }
+
+    .nav__list .nav__item {
+        box-shadow: 0px -1.5px 1.2px rgba(0, 0, 0, .9);
+        width: 100%;
+        text-align: center;
+        padding-block: 0.7rem;
+        font-size: 1rem;
+    }
+
+    .nav__sub {
+        position: static;
+        list-style: none;
+        width: 100%;
+        box-shadow: none;
+    }
+
+    .nav__link-btn[aria-expanded='true'] {
+        +.nav__sub {
+            transform: translateY(0);
+        }
+
+        /* +.nav__menu .nav__list li {
+        animation: smoothNav 0.3s ease-in-out forwards;
+        cursor: pointer;
+    } */
+    }
+
+    .nav__sub-item {
+        margin: 0;
+        border-bottom: none;
+    }
+
+    .nav__sub-item a {
+        font-size: 1.1rem;
+    }
+
+}
