@@ -149,7 +149,7 @@ a:focus {
     font-size: 1.6rem;
     list-style: none;
     box-shadow: 0 0 0.5rem rgba(0, 0, 0, .6);
-    transform: translateY(-100vw);
+    transform: translateY(-100vh);
 }
 
 .nav__link-btn[aria-expanded='true'] {
@@ -214,14 +214,13 @@ a:focus {
     }
 
     .nav__sub {
-        position: static;
-        list-style: none;
         width: 100%;
         box-shadow: none;
     }
 
     .nav__link-btn[aria-expanded='true'] {
         +.nav__sub {
+            position: static;
             transform: translateY(0);
         }
 
